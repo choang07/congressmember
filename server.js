@@ -94,7 +94,7 @@ app.route('/memberBills')
   .get(async(req, res) => {
     const memberId = req.query.memberId;
     console.log("memberId=", memberId);
-    const data = await fetch('https://api.propublica.org/congress/v1/members/' + memberId + '/bills/introduced.json',
+    const data = await fetch('https://api.propublica.org/congress/v1/members/' + memberId + '/bills/active.json',
     { 
       method: 'GET',
       headers: headers
